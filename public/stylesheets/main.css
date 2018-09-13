@@ -1,0 +1,31 @@
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+#delete-form {
+    display: inline;
+}
+
+.form-center {
+    padding: auto;
+    margin: auto;
+    text-align: center;
+    font-size: 120%
+}
+
+.text-right {
+    text-align: right;
+}
+
+.picture-center {
+    padding-top: 20px;
+    padding-left: 80px;
+}
