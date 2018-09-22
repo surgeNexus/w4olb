@@ -37,7 +37,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
                     comment.save();
                     campground.comments.push(comment);
                     campground.save();
-                    res.flash("success", "Comment added")
+                    req.flash("success", "Comment added")
                     res.redirect('/radiomarket/' + campground._id);
                 }
             });
@@ -81,7 +81,7 @@ router.delete("/:comment_id", middleware.checkCommentOwnership, function(req, re
             res.redirect("back");
         } else{
             req.flash("success", "Comment Deleted")
-            res.redirect("/radiomarket/" + req.params.id);
+            res.redirect("/radiomarket  /" + req.params.id);
         }
     });
 });

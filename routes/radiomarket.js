@@ -10,7 +10,7 @@ router.get("/", function(req, res){
        if(err){
            console.log(err);
        } else {
-          res.render("radiomarket/index",{campgrounds:allCampgrounds});
+          res.render("radiomarket/index",{campgrounds:allCampgrounds, page: 'radiomarket'});
        }
     });
 });
