@@ -18,10 +18,9 @@ var express          = require("express"),
 var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/radiomarket"),
     indexRoutes      = require("./routes/index"),
-    homeRoutes       = require("./routes/home"),
-    userRoutes       = require("./routes/user")
+    homeRoutes       = require("./routes/home")
     
-mongoose.connect("mongodb://localhost/smarc_v13");
+mongoose.connect("mongodb://localhost/smarc_v14");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -52,8 +51,7 @@ app.use(function(req, res, next){
 app.use(indexRoutes);
 app.use("/radiomarket", campgroundRoutes);
 app.use("/radiomarket/:id/comments", commentRoutes);
-app.use("/home", homeRoutes);
-app.use("/user", userRoutes);
+app.use("/home", homeRoutes)
 
 
 app.listen(8080, function(){

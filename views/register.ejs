@@ -1,6 +1,6 @@
 <% include ./partials/header %>
 
-<div class="container form-center">
+<div class="container well form-center">
     <h1>Sign Up!</h1>
     <form action="/register" method="POST">
     <div class="form-group">
@@ -10,8 +10,11 @@
         <input type="text" name="lastName" placeholder="Last Name">
     </div>
     <div class="form-group">
-    <input type="text" name="phoneNumber" placeholder="Phone Number">
-</div>
+        <input type="email" name="email" placeholder="Email Address">
+    </div>
+    <div class="form-group">
+        <input type="tel" name="phone" placeholder="Phone Number">
+    </div>
     <div class="form-group">
         <input type="text" name="username" placeholder="Callsign">
     </div>
@@ -19,11 +22,13 @@
         <input type="password" name="password" placeholder="Password">
     </div>
     <div class="form-group">
-        <input type="password" name="password" placeholder="Password">
+        <input type="text" name="profileImage" placeholder="Profile Image URL">
+    </div>
+    <div class="form-group">
+        <input type="text" name="memberCode" placeholder="Member Code">
     </div>
     <div class="form-group">
         <input class="btn btn-primary" type="submit" value="Submit">
     </div>
 </form>
-
 <% include ./partials/footer %>

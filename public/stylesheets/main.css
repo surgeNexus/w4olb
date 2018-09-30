@@ -34,3 +34,16 @@
 .form-media {
     padding-top: 20px
 }
+
+.user-show-market {
+    padding-top: 100px;
+    padding-left: 60px
+}
+
+.table th, .table td { 
+    border-top: none !important; 
+}
+
+ul {
+    list-style: none;
+}

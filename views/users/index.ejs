@@ -1,0 +1,28 @@
+<% include ../partials/header %> 
+
+ <div class="container">
+     <header class="jumbotron">
+         <div class="container">
+             <h2>Smoky Mountain Amateur Radio Club</h2>
+             <p>Member's Section</p>
+         </div>
+     </header>
+     
+     <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% users.forEach(function(users){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                   <img src="<%= users.profileImage %>">
+                   <div class="caption">
+                       <h4><%= users.name %></h4>
+                   </div>
+                   <p>
+                       <a href="/users/<%= users._id %>" class="btn btn-primary"><%= users.username %></a>
+                   </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+<% include ../partials/footer %>
