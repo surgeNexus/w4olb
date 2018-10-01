@@ -54,6 +54,6 @@ app.use("/radiomarket/:id/comments", commentRoutes);
 app.use("/home", homeRoutes)
 
 
-app.listen(8080, function(){
+app.listen(3000, function(){
    console.log("The SMARC Server Has Started!");
 });
